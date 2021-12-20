@@ -1,0 +1,52 @@
+body {
+    background: radial-gradient(circle, rgba(5, 243, 245, 1) 50%, rgba(151, 255, 245, 0.8603641285615808) 100%);
+}
+
+form {
+    width: 20%;
+    margin: auto;
+    background-color: white;
+    border: 2px solid # white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+h2 {
+    padding: 20px;
+}
+
+input {
+    display: block;
+    border: none;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid rgb(0, 174, 255);
+    font-size: 18;
+    color: black;
+}
+
+button {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgb(5, 243, 245);
+    background: radial-gradient(circle, rgba(5, 243, 245, 1) 50%, rgba(151, 255, 245, 0.8603641285615808) 100%);
+    border: none;
+    radius: 2px;
+    color: white;
+    font-size: 20;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 110, 255);
+}
+
+button:hover {
+    background: rgb(151, 255, 245);
+    background: radial-gradient(circle, rgba(151, 255, 245, 0.8603641285615808) 0%, rgba(5, 243, 245, 1) 50%);
+}
