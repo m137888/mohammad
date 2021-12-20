@@ -1,4 +1,4 @@
-ul {
+header ul {
     list-style-type: none;
     background-color: rgb(35, 53, 75);
     width: 100%;
@@ -6,7 +6,7 @@ ul {
     padding: 0px;
 }
 
-li {
+header li {
     font-size: 15;
     display: inline-block;
     padding: 20px 15px 20px 15px;

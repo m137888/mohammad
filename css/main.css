@@ -34,7 +34,77 @@
         float: right;
     }
     
-    a {
+    header a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    main {
+        width: 65%;
+        display: inline-block;
+    }
+    
+    main img,
+    aside img {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+    }
+    
+    main h3,
+    aside h3 {
+        display: inline-block;
+    }
+    
+    main a,
+    aside a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    aside {
+        width: 30%;
+        display: inline-block;
+    }
+    
+    footer {
+        background-color: rgb(35, 53, 75);
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        color: white;
+    }
+    
+    footer img {
+        width: 200px;
+        height: 200px;
+        float: right;
+        margin-right: 50px;
+        display: block;
+    }
+    
+    .clearfix {
+        clear: both;
+    }
+    
+    footer p {
+        color: white;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+    }
+    
+    .footer-right {
+        display: inline-block;
+    }
+    
+    .footer-center {
+        display: inline-block;
+        width: 50%;
+        margin-right: 300px;
+    }
+    
+    footer a {
         text-decoration: none;
         color: white;
     }
