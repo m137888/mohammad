@@ -1,0 +1,73 @@
+body {
+    background: rgb(5, 243, 245);
+    background: radial-gradient(circle, rgba(5, 243, 245, 1) 50%, rgba(151, 255, 245, 0.8603641285615808) 100%);
+}
+
+form {
+    width: 20%;
+    margin: auto;
+    display: block;
+    background-color: white;
+    border: 2px solid # white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+input,
+a {
+    display: block;
+}
+
+span {
+    color: rgb(0, 174, 255);
+}
+
+h2 {
+    padding: 20px;
+}
+
+input {
+    border: none;
+    margin: auto;
+    padding: 10px;
+    border-bottom: 1px solid rgb(0, 174, 255);
+}
+
+button {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgb(5, 243, 245);
+    background: radial-gradient(circle, rgba(5, 243, 245, 1) 50%, rgba(151, 255, 245, 0.8603641285615808) 100%);
+    border: none;
+    radius: 2px;
+    color: white;
+    font-size: 20;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 110, 255);
+}
+
+button:hover {
+    background: rgb(151, 255, 245);
+    background: radial-gradient(circle, rgba(151, 255, 245, 0.8603641285615808) 0%, rgba(5, 243, 245, 1) 50%);
+}
+
+#forget {
+    color: rgb(145, 145, 145);
+    font-size: 15;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#create {
+    color: rgb(0, 110, 255);
+    font-size: 15;
+    padding: 0px 0px 30px 0px;
+    text-decoration: none;
+}
