@@ -47,14 +47,14 @@
         </div>
         <ul>
             <li id="home"><a href="main.html"><i class="fa fa-home"></i> خانه</a></li>
-            <li><a href="login.html"><i class="fa fa-gears"></i> ورود به حساب کاربری </a></li>
-            <li><a href="parking.html"><i class="fa fa-home"></i> ثبت پارکینگ </a></li>
-            <li><a href="car.html"><i class="fa fa-car"></i> ثبت ماشین </a></li>
-            <li><a href="person.html"><i class="fa fa-address-card-o"></i> ثبت اطلاعات شخص </a></li>
-            <li><a href="sabt.html"><i class="fa fa-bullhorn"></i> ثبت تخلف </a></li>
-            <li><a href="takhalofcar.html"><i class="fa fa-envelope-o"></i> نمایش تخلفات ماشین </a></li>
-            <li><a href="takhalofper.html"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی </a></li>
-            <li><a href="takhalofdate.html"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی در زمان های مشخص </a>
+            <li><a href="login.php"><i class="fa fa-gears"></i> ورود به حساب کاربری </a></li>
+            <li><a href="parking.php"><i class="fa fa-home"></i> ثبت پارکینگ </a></li>
+            <li><a href="car.php"><i class="fa fa-car"></i> ثبت ماشین </a></li>
+            <li><a href="person.php"><i class="fa fa-address-card-o"></i> ثبت اطلاعات شخص </a></li>
+            <li><a href="sabt.php"><i class="fa fa-bullhorn"></i> ثبت تخلف </a></li>
+            <li><a href="takhalofcar.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات ماشین </a></li>
+            <li><a href="takhalofper.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی </a></li>
+            <li><a href="takhalofdate.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی در زمان های مشخص </a>
             </li>
         </ul>
     </header>
