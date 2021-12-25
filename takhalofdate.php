@@ -12,7 +12,42 @@
 </head>
 
 <body>
-    <?php
+    
+    <header>
+        <div id="head">
+            <a href="http://shahreza.ac.ir">
+                <img src="image/logo.png" title="دانشگاه شهرضا" id="topleft" alt=""></a>
+            <p>به سامانه راهنمایی رانندگی خوش آمدید</p>
+            <a href="http://rahvar120.ir">
+                <img src="image/naja.png" title="راهنمایی رانندگی" id="topright" alt=""></a>
+        </div>
+        <ul>
+            <li id="home"><a href="main.html"><i class="fa fa-home"></i> خانه</a></li>
+            <li><a href="login.php"><i class="fa fa-gears"></i> ورود به حساب کاربری </a></li>
+            <li><a href="parking.php"><i class="fa fa-home"></i> ثبت پارکینگ </a></li>
+            <li><a href="car.php"><i class="fa fa-car"></i> ثبت ماشین </a></li>
+            <li><a href="person.php"><i class="fa fa-address-card-o"></i> ثبت اطلاعات شخص </a></li>
+            <li><a href="sabt.php"><i class="fa fa-bullhorn"></i> ثبت تخلف </a></li>
+            <li><a href="takhalofcar.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات ماشین </a></li>
+            <li><a href="takhalofper.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی </a></li>
+            <li><a href="takhalofdate.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی در زمان های مشخص </a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <div>
+
+            <form method="post">
+                <h2> تخلفات شخص در زمان مشخص</h2>
+                <input type="text" placeholder="کدملی" name="frm6[melli3]" class=" form-control w-75 mx-auto "required>
+                <input type="date" placeholder="شروع بازه" name="frm7[date1]" class=" form-control w-75 mx-auto " required>
+                <input type="date" placeholder="پایان بازه" name="frm8[date2]" class=" form-control w-75 mx-auto " required>
+                <button type="submit" name="btn6">نمایش تخلفات</button>
+
+            </form>
+        </div><br /><hr /><br/>
+        <?php
+        
     //daryaft etlaat .
     if(isset($_POST['btn6']))
     {
@@ -40,45 +75,10 @@
     }
 
          ?>
-    <header>
-        <div id="head">
-            <a href="http://shahreza.ac.ir">
-                <img src="image/logo.png" title="دانشگاه شهرضا" id="topleft" alt=""></a>
-            <p>به سامانه راهنمایی رانندگی خوش آمدید</p>
-            <a href="http://rahvar120.ir">
-                <img src="image/naja.png" title="راهنمایی رانندگی" id="topright" alt=""></a>
-        </div>
-        <ul>
-            <li id="home"><a href="main.html"><i class="fa fa-home"></i> خانه</a></li>
-            <li><a href="login.php"><i class="fa fa-gears"></i> ورود به حساب کاربری </a></li>
-            <li><a href="parking.php"><i class="fa fa-home"></i> ثبت پارکینگ </a></li>
-            <li><a href="car.php"><i class="fa fa-car"></i> ثبت ماشین </a></li>
-            <li><a href="person.php"><i class="fa fa-address-card-o"></i> ثبت اطلاعات شخص </a></li>
-            <li><a href="sabt.php"><i class="fa fa-bullhorn"></i> ثبت تخلف </a></li>
-            <li><a href="takhalofcar.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات ماشین </a></li>
-            <li><a href="takhalofper.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی </a></li>
-            <li><a href="takhalofdate.php"><i class="fa fa-envelope-o"></i> نمایش تخلفات کدملی در زمان های مشخص </a>
-            </li>
-        </ul>
-    </header>
-    <section>
-        <div>
-
-            <form>
-                <h2> تخلفات شخص در زمان مشخص</h2>
-                <input type="text" placeholder="کدملی" name="frm6[melli3]" class=" form-control w-75 mx-auto "required>
-                <input type="date" placeholder="شروع بازه" name="frm7[date1]" class=" form-control w-75 mx-auto " required>
-                <input type="date" placeholder="پایان بازه" name="frm8[date2]" class=" form-control w-75 mx-auto " required>
-                <button type="submit" name="btn6">نمایش تخلفات</button>
-
-            </form>
-        </div>
     </section>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <textarea class="w-100" rows="5" disabled>
-<?php // echo $mat; ?>
-</textarea>
+ 
 
 </body>
 

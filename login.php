@@ -12,31 +12,7 @@
 </head>
 
 <body>
-    <?php
-    //daryaft etlaat  .
-    if(isset($_POST['btn9']))
-    {
-        require_once 'config.php';
-               $matn="";
-              $data1=$_POST['frm1'];
-              $username=$data1['uname'];
-              $email=$data1['uemail'];
-              $pass=$data1['upas'];
-             if($username !=null && $email !=null && $pass !=null){
-  
-              $connect=mysqli_connect("127.0.0.1","root","","takhalof");
-              $query="SELECT name1,lastname1 FROM account WHERE  email =$email AND  password1=$pass";
-              $connect->set_charset('utf8');
-              $sql = mysqli_query($connect, $query);
-              //var_dump($sql);
-              while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
-             //$matn=$pici;
-              echo "  نام: " .$row['name1']."    نام خانوادگی: " .$row['lastname1'].  "<br>";};
-  
-          }
-      }
-  
-             ?>
+   
     <header>
         <div id="head">
             <a href="http://shahreza.ac.ir">
@@ -59,21 +35,43 @@
         </ul>
     </header>
     <div>
-        <form action="">
+        <form method="post" class="container was-validated rounded p-3 bg-light">
             <h2><span>ورود </span>به حساب کاربری</h2>
-            <input type="text" placeholder="نام کاربری" class=" form-control w-75 mx-auto " id="uname"  name="frm1[uname]" required>
-            <input type="email" placeholder="ایمیل" class=" form-control w-75 mx-auto " id="uemail"  name="frm1[uemail]" required>
-            <input type="password" placeholder="رمز" class=" form-control w-75 mx-auto " id="upas"  name="frm1[upas]" required>
-            <button id="login" type="submit" name="btn9" id="btn9" class="  w-50 btn-outline-primary">ورود </button>
+            <input type="text" placeholder="نام کاربری" class=" form-control w-75 mx-auto "   name="frm1[uname]" required>
+            <input type="email" placeholder="ایمیل" class=" form-control w-75 mx-auto "   name="frm1[uemail]" required>
+            <input type="password" placeholder="رمز" class=" form-control w-75 mx-auto "   name="frm1[upas]" required>
+            <button id="login" type="submit" name="btn" class="  w-50 btn-outline-primary">ورود </button>
             <a href="forget.php" id="forget">فراموشی رمز عبور</a>
             <a href="createacc.php" id="create">ایجاد حساب</a>
         </form>
     </div>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <textarea class="w-100" rows="5" disabled>
-<?php // echo $mat; ?>
-</textarea>
+    <br><hr><br>
+ <?php
+    //daryaft etlaat  .
+    if(isset($_POST['btn']))
+    {
+        require_once 'config.php';
+               $matn="";
+              $data1=$_POST['frm1'];
+              $email=$data1['uemail'];
+              $pass=$data1['upas'];
+             if($email !=null && $pass !=null){
+  
+              $connect=mysqli_connect("127.0.0.1","root","","takhalof");
+              $query="SELECT nam,pass FROM account WHERE  email =$email AND pass =$pass ";
+              $connect->set_charset('utf8');
+              $sql = mysqli_query($connect, $query);
+              //var_dump($sql);
+              while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
+             //$matn=$pici;
+              echo "  نام: " .$row['nam']."  رمز: " .$row['pass']. "<br>";};
+  
+          }
+      }
+  
+             ?>
 </body>
 
 </html>

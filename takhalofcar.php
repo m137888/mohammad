@@ -12,30 +12,7 @@
 </head>
 
 <body>
-    <?php
-    //daryaft etlaat .
-    if(isset($_POST['btn5']))
-    {
-    require_once 'config.php';
-           $matn="";
-          $data8=$_POST['frm5'];
-          $pel=$data8['pelak2'];
 
-         if($pel!=null ){
-
-          $connect=mysqli_connect("127.0.0.1","root","","takhalof");
-          $query="SELECT person.name,person.last,SUM(price) FROM takh,person WHERE person.melli=takh.melli AND takh.pelak='$pel' group by takh.melli ";
-          $connect->set_charset('utf8');
-          $sql = mysqli_query($connect, $query);
-          //var_dump($sql);
-          while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
-         //$matn=$pici;
-          echo "نام: ".$row['name']."        "."نام خانوادگی: " .$row['last']."        ". "مجموع تخلفات :".$row['SUM(price)'].  "<br>";};
-
-      }
-    }
-
-         ?>
     <header>
         <div id="head">
             <a href="http://shahreza.ac.ir">
@@ -60,19 +37,42 @@
     <section>
         <div>
 
-            <form>
+            <form  method="post">
                 <h2>تخلفات ماشین</h2>
                 <input type="text" placeholder="شماره پلاک"  name="frm5[pelak2]" class=" form-control w-75 mx-auto " required>
                 <button  type="submit" name="btn5">نمایش تخلفات</button>
 
             </form>
         </div>
-    </section>
+    </section>  
+    <br /><hr><br> 
+     <?php
+    //daryaft etlaat .
+    if(isset($_POST['btn5']))
+    {
+    require_once 'config.php';
+           $matn="";
+          $data8=$_POST['frm5'];
+          $pel=$data8['pelak2'];
+
+         if($pel!=null ){
+
+          $connect=mysqli_connect("127.0.0.1","root","","takhalof");
+          $query="SELECT person.name,person.last,SUM(price) FROM takh,person WHERE person.melli=takh.melli AND takh.pelak='$pel' group by takh.melli ";
+          $connect->set_charset('utf8');
+          $sql = mysqli_query($connect, $query);
+          //var_dump($sql);
+          while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
+         //$matn=$pici;
+          echo "نام: ".$row['name']."        "."نام خانوادگی: " .$row['last']."        ". "مجموع تخلفات :".$row['SUM(price)'].  "<br>";};
+
+      }
+    }
+
+         ?>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <textarea class="w-100" rows="5" disabled>
-<?php // echo $mat; ?>
-</textarea>
+
 </body>
 
 </html>

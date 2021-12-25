@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    
     <title>Create Account</title>
 </head>
 
@@ -24,11 +25,11 @@
               $age=$data1['uage'];
               $phone=$data1['uphone'];
               $email=$data1['uemail'];
-              $password=$data1['upas'];
-             if($name !=null && $family !=null && $age !=null && $phone !=null && $email !=null && $pasword !=null){
-  echo $name ." ". $family ." ". $age ." ". $phone ." ". $email ." ".$password;
+              $pass=$data1['upas'];
+             if($name !=null && $family !=null && $age !=null && $phone !=null && $email !=null && $pass !=null){
+  echo $name ." ". $family ." ". $age ." ". $phone ." ". $email ." ".$pass;
   $connect=mysqli_connect("127.0.0.1","root","","takhalof");
-             $query="insert into account (name1,lastname1,age,phone,email,password) values ('$name','$family','$age','$phone','$email','$pasword');";
+             $query="insert into account (nam,last1,age,phone,email,pass) values ('$name','$family','$age','$phone','$email','$pass');";
               $connect->set_charset('utf8');
               $sql = mysqli_query($connect,$query);
   
@@ -60,16 +61,16 @@
     <section>
         <div>
 
-            <form  method="POST" class="container was-validated rounded p-3 bg-light">
+            <form  method="post" class="container was-validated rounded p-3 bg-light">
                 <h2>ایجاد حساب کاربری</h2>
                 <input type="text" placeholder="نام"class=" form-control w-75 mx-auto " id="uname"  name="frm1[uname]" required>
                 <input type="text" placeholder="نام خانوادگی"class=" form-control w-75 mx-auto " id="lname"  name="frm1[lname]" required>
                 <input type="text" maxlength="2" placeholder="سن" class=" form-control w-75 mx-auto " id="uage"  name="frm1[uage]"required>
                 <input type="text" maxlength="11" placeholder="شماره تلفن"class=" form-control w-75 mx-auto " id="uphone"  name="frm1[uphone]" required>
-                <input type="email" placeholder="ایمیل" class=" form-control w-75 mx-auto " id="uemail"  name="frm1[nemail]"required>
+                <input type="email" placeholder="ایمیل" class=" form-control w-75 mx-auto " id="uemail"  name="frm1[uemail]"required>
                 <input type="password" placeholder="رمز" class=" form-control w-75 mx-auto " id="upas"  name="frm1[upas]"required>
                 <input type="password" placeholder="تکراررمز" class=" form-control w-75 mx-auto " id="upass"  name="frm1[upass]"required>
-                <button type="submit" name="btn8" id="btn8" class="  w-50 btn-outline-primary">ثبت نام</button>
+                <button type="submit" name="btn8" class="  w-50 btn-outline-primary">ثبت نام</button>
 
             </form>
         </div>

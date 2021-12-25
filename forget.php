@@ -12,30 +12,6 @@
 </head>
 
 <body>
-    <?php
-    //daryaft etlaat .
-    if(isset($_POST['btn10']))
-    {
-    require_once 'config.php';
-           $matn="";
-          $data8=$_POST['frm10'];
-          $email=$data8['uemail'];
-
-         if($email!=null ){
-
-          $connect=mysqli_connect("127.0.0.1","root","","takhalof");
-          $query="SELECT password1 FROM account WHERE  email='$email' ";
-          $connect->set_charset('utf8');
-          $sql = mysqli_query($connect, $query);
-          //var_dump($sql);
-          while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
-         //$matn=$pici;
-          echo "رمز عبور: ".$row['password1'].  "<br>";};
-
-      }
-    }
-
-         ?>
     <header>
         <div id="head">
             <a href="http://shahreza.ac.ir">
@@ -62,7 +38,7 @@
 
             <form  method="POST" class="container was-validated rounded p-3 bg-light">
                 <h2>فراموشی رمز عبور</h2>
-                <input type="email" placeholder="ایمیل"class=" form-control w-75 mx-auto " id="uemail"  name="frm10[uemail]" required>
+                <input type="email" placeholder="ایمیل"class=" form-control w-75 mx-auto "  name="frm1[uemail]" required>
                 <button type="submit" name="btn10" id="btn10" class="  w-50 btn-outline-primary">ارسال کد</button>
 
             </form>
@@ -70,7 +46,29 @@
     </section>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+<br><hr><br>
+    <?php
+    //daryaft etlaat .
+    if(isset($_POST['btn10']))
+    {
+    require_once 'config.php';
+           $matn="";
+          $data1=$_POST['frm1'];
+          $email=$data1['uemail'];
 
+         if($email!=null ){
+
+          $connect=mysqli_connect("127.0.0.1","root","","takhalof");
+          $query="SELECT pass FROM account WHERE  email='$email' ";
+          $connect->set_charset('utf8');
+          $sql = mysqli_query($connect, $query);
+          //var_dump($sql);
+          while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
+         //$matn=$pici;
+          echo "رمز عبور: ".$row['pass']. "<br>";};
+      }
+    }
+         ?>
 </body>
 
 </html>

@@ -12,29 +12,7 @@
 </head>
 
 <body>
-    <?php
-    //daryaft etlaat  .
-    if(isset($_POST['btn4']))
-    {
-        require_once 'config.php';
-               $matn="";
-              $data1=$_POST['frm4'];
-              $code=$data1['melli2'];
-             if($code !=null ){
-  
-              $connect=mysqli_connect("127.0.0.1","root","","takhalof");
-              $query="SELECT pelak,SUM(price) FROM takh WHERE  melli =$code group BY pelak";
-              $connect->set_charset('utf8');
-              $sql = mysqli_query($connect, $query);
-              //var_dump($sql);
-              while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
-             //$matn=$pici;
-              echo "  شماره پلاک: " .$row['pelak']."    مجموع تخلف فرد با پلاک: " .$row['SUM(price)'].  "<br>";};
-  
-          }
-      }
-  
-             ?>
+
     <header>
         <div id="head">
             <a href="http://shahreza.ac.ir">
@@ -59,7 +37,7 @@
     <section>
         <div>
 
-            <form>
+            <form method="post" >
                 <h2>تخلفات شخص</h2>
                 <input type="text" placeholder="کدملی" name="frm4[melli2]" class=" form-control w-75 mx-auto " required>
                 <button type="submit" name="btn4"> نمایش تخلفات</button>
@@ -67,11 +45,33 @@
             </form>
         </div>
     </section>
+    <br />
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <textarea class="w-100" rows="5" disabled>
-<?php // echo $mat; ?>
+ <hr /> <br>
+    <?php
+    //daryaft etlaat  .
+    if(isset($_POST['btn4']))
+    {
+        require_once 'config.php';
+               $matn="";
+              $data1=$_POST['frm4'];
+              $code=$data1['melli2'];
+             if($code !=null ){
+  
+              $connect=mysqli_connect("127.0.0.1","root","","takhalof");
+              $query="SELECT pelak,SUM(price) FROM takh WHERE  melli =$code group BY pelak";
+              $connect->set_charset('utf8');
+              $sql = mysqli_query($connect, $query);
+              //var_dump($sql);
+              while($row = mysqli_fetch_array($sql)){//$pici=$row['pelak'];};
+             //$matn=$pici;
+              echo "  شماره پلاک: " .$row['pelak']."    مجموع تخلف فرد با پلاک: " .$row['SUM(price)']. "<br>";};
+  
+          }
+      }
+  
+             ?>
 </textarea>
 </body>
 
